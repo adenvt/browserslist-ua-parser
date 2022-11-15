@@ -1,2 +1,3 @@
 # browserslist-ua-parser
-Parse User-Agent into browserslist compatible
+
+> Parse User-Agent into browserslist's compatible format
