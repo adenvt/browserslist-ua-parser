@@ -180,5 +180,3 @@ export function parseUA (uaString: string): UaInfo {
     version: version,
   }
 }
-
-export default parseUA
