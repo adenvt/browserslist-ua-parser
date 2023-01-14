@@ -3,7 +3,10 @@
   "packageManager": "yarn@3.3.1",
   "scripts": {
     "start": "jiti ./src/index.ts",
-    "build": "unbuild"
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "build": "unbuild",
+    "prepack": "yarn build"
   },
   "files": [
     "dist"
@@ -21,11 +24,13 @@
   },
   "devDependencies": {
     "@types/caniuse-lite": "^1",
+    "@types/jest": "^29.2.5",
     "@types/semver": "^7",
     "@types/ua-parser-js": "^0.7.36",
+    "@vitest/coverage-c8": "^0.27.1",
     "jiti": "^1.16.0",
     "unbuild": "^0.9.4",
-    "vitest": "^0.27.0"
+    "vitest": "^0.27.1"
   },
   "dependencies": {
     "caniuse-lite": "^1.0.30001431",

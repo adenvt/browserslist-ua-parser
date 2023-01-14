@@ -83,6 +83,7 @@ export function findBrowser (uaString: string): UaInfo {
     }
   }
 
+  // Case C: Some browser from Ipad or Emulator not detected as iOS.
   if (parsedUA.browser.name === 'Mobile Safari') {
     return {
       browser: 'ios_saf',
