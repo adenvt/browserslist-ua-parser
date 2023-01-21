@@ -1,5 +1,6 @@
 {
   "name": "browserslist-ua-parser",
+  "version": "1.0.0",
   "packageManager": "yarn@3.3.1",
   "scripts": {
     "start": "jiti ./src/index.ts",

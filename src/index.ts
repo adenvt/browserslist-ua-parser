@@ -10,20 +10,17 @@ export function findVersion (browser: string, version_: string): string | undefi
 
   if (agent && version) {
     return agent.versions.filter(Boolean).reverse().find((value) => {
-      if (!value)
-        return false
-
       if (value === 'all')
         return true
 
-      if (value.includes('-')) {
+      if (value?.includes('-')) {
         const [start,]  = value.split('-')
         const contrains = `>=${start}`
 
         return satisfies(version, contrains, true)
       }
 
-      if (value.includes('.')) {
+      if (value?.includes('.')) {
         return satisfies(version, `>=${value}`, true)
       }
 
@@ -64,7 +61,7 @@ export function findBrowser (uaString: string): UaInfo {
   const parsedEngineVersion  = coerce(parsedUA.engine.version, { loose: true })?.version
 
   // Case A: For Safari on iOS, the use the browser version
-  if (parsedUA.browser.name === 'Safari' && parsedUA.os.name === 'iOS') {
+  if (parsedUA.browser.name === 'Mobile Safari') {
     return {
       browser: 'ios_saf',
       version: parsedBrowserVersion,
@@ -83,20 +80,16 @@ export function findBrowser (uaString: string): UaInfo {
     }
   }
 
-  // Case C: Some browser from Ipad or Emulator not detected as iOS.
-  if (parsedUA.browser.name === 'Mobile Safari') {
+  if (parsedUA.browser.name === 'Opera Mobi') {
     return {
-      browser: 'ios_saf',
-      version: parsedBrowserVersion,
+      browser: 'op_mob',
+      version: parsedBrowserVersion
     }
   }
 
-  if (
-    (parsedUA.browser.name === 'Opera' && parsedUA.device.type === 'mobile') ||
-    parsedUA.browser.name === 'Opera Mobi'
-  ) {
+  if (parsedUA.browser.name === 'Opera Mini') {
     return {
-      browser: 'op_mob',
+      browser: 'op_mini',
       version: parsedBrowserVersion
     }
   }
@@ -159,15 +152,8 @@ export function findBrowser (uaString: string): UaInfo {
     }
   }
 
-  if (parsedUA.browser.name === 'UCBrowser') {
-    return {
-      browser: 'and_uc',
-      version: parsedBrowserVersion
-    }
-  }
-
   return {
-    browser: parsedUA.browser.name?.toLowerCase(),
+    browser: parsedUA.browser.name?.trim().toLowerCase(),
     version: parsedBrowserVersion
   }
 }
