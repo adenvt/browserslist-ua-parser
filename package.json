@@ -28,10 +28,10 @@
     "@types/jest": "^29.2.5",
     "@types/semver": "^7",
     "@types/ua-parser-js": "^0.7.36",
-    "@vitest/coverage-c8": "^0.28.0",
+    "@vitest/coverage-c8": "^0.32.0",
     "jiti": "^1.16.0",
     "unbuild": "^1.0.0",
-    "vitest": "^0.28.0"
+    "vitest": "^0.32.0"
   },
   "dependencies": {
     "caniuse-lite": "^1.0.30001431",
