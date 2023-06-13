@@ -139,8 +139,8 @@ describe('parseUA', () => {
     ],
     [
       'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36 HeyTapBrowser/25.8.7.0.2beta',
-      'safari',
-      undefined,
+      'heytap',
+      '25.8',
     ],
     [
       'Mozilla/5.0 (Linux; Android 5.1.1; SAMSUNG SM-J111F Build/LMY47V) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/3.5 Chrome/38.0.2125.102 Mobile Safari/537.36',
