@@ -1236,7 +1236,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:^29.5.13":
+"@types/jest@npm:^29.2.5":
   version: 29.5.13
   resolution: "@types/jest@npm:29.5.13"
   dependencies:
