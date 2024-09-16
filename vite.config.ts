@@ -11,5 +11,8 @@ export default defineConfig({
   },
   test: {
     globals: true,
+    coverage: {
+      provider: 'v8'
+    }
   },
 })
