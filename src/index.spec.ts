@@ -147,6 +147,11 @@ describe('parseUA', () => {
       'samsung',
       undefined,
     ],
+    [
+      'Invalid User Agent',
+      undefined,
+      undefined,
+    ],
   ]
 
   it.each(browsers)('should able to parse UA Agent (%s)', (ua, browser, version) => {
