@@ -5,6 +5,7 @@ import {
   findVersion,
   normalizeUA,
 } from '.'
+import UAParser from 'ua-parser-js'
 
 describe('KNOWN_BROWSERS', () => {
   it('should return list of known browser from caniuse data', () => {
@@ -75,7 +76,7 @@ describe('parseUA', () => {
     [
       'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Mobile/15E148 Safari/604.1',
       'ios_saf',
-      '15.6',
+      '15.6-15.8',
     ],
     [
       'Mozilla/5.0 (Linux; U; Android 10; en-US; RMX1901 Build/QKQ1.190918.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 UCBrowser/13.4.0.1306 Mobile Safari/537.36',

@@ -94,7 +94,7 @@ export function findBrowser (uaString: string): UaInfo {
     }
   }
 
-  if (parsedUA.browser.name === 'Samsung Browser') {
+  if (parsedUA.browser.name === 'Samsung Internet') {
     return {
       browser: 'samsung',
       version: parsedBrowserVersion
