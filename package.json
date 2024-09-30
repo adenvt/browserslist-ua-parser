@@ -30,7 +30,7 @@
     "@types/ua-parser-js": "^0.7.39",
     "@vitest/coverage-v8": "^2.1.1",
     "caniuse-lite": "^1.0.30001660",
-    "jiti": "^1.21.6",
+    "jiti": "^2.0.0",
     "unbuild": "^2.0.0",
     "vitest": "^2.1.1"
   },
