@@ -29,13 +29,16 @@
     "@types/semver": "^7.5.8",
     "@types/ua-parser-js": "^0.7.39",
     "@vitest/coverage-v8": "^2.1.1",
+    "caniuse-lite": "^1.0.30001660",
     "jiti": "^1.21.6",
     "unbuild": "^2.0.0",
     "vitest": "^2.1.1"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001660",
     "semver": "^7.6.3",
     "ua-parser-js": "^1.0.39"
+  },
+  "peerDependencies": {
+    "caniuse-lite": "*"
   }
 }
